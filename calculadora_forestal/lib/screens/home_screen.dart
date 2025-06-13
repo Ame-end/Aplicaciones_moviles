@@ -28,10 +28,18 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
+
         // Centra los botones en la pantalla y coloca el botón de desarrolladores abajo
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 24.0, bottom: 32.0),
+              child: Image.asset(
+                'assets/images/unsijLogo.png', // Cambia la ruta por la tuya
+                height: 120, // Ajusta el tamaño según lo necesites
+              ),
+            ),
             Expanded(
               child: Center(
                 child: Column(
@@ -85,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                     builder: (context) => AlertDialog(
                       title: const Text('Desarrolladores'),
                       content: const Text(
-                        'Amelia Mendoza López\nElton Yael',
+                        'Amelia Mendoza López\nElton Yael Hernández Pérez',
                       ), // Cambia por los nombres reales
                       actions: [
                         TextButton(
