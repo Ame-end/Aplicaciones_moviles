@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:calculadora_forestal/configurations/app_theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
 
 /// Pantalla para calcular la biomasa de un árbol
@@ -83,7 +84,7 @@ class _VentanaBiomasaState extends State<VentanaBiomasa> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cálculo de Biomasa'),
-        backgroundColor: Colors.green[800],
+        backgroundColor: Color.fromARGB(255, 124, 135, 92),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -112,7 +113,8 @@ class _VentanaBiomasaState extends State<VentanaBiomasa> {
               ElevatedButton(
                 onPressed: calcularBiomasa,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green[800],
+                  backgroundColor: Color.fromARGB(255, 47, 118, 24),
+                  foregroundColor: Color.fromARGB(255, 142, 175, 132),
                   padding: const EdgeInsets.symmetric(
                     horizontal: 40,
                     vertical: 15,

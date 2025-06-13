@@ -28,41 +28,77 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        // Centra los botones en la pantalla
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Botón para calcular volumen
-              BotonCalcular(
-                texto: 'Calcular Volumen',
-                icono: Icons.calculate,
-                color: Color(0xFF254435),
-                // Redirige a la pantalla de cálculo de volumen
-                onPressed: () => Navigator.push(
-                  context,
-                  // Navega a la ventana de volumen
-                  MaterialPageRoute(
-                    builder: (context) => const VentanaVolumen(),
-                  ),
+        // Centra los botones en la pantalla y coloca el botón de desarrolladores abajo
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Botón para calcular volumen
+                    BotonCalcular(
+                      texto: 'Calcular Volumen',
+                      icono: Icons.calculate,
+                      color: Color(0xFF254435),
+                      // Redirige a la pantalla de cálculo de volumen
+                      onPressed: () => Navigator.push(
+                        context,
+                        // Navega a la ventana de volumen
+                        MaterialPageRoute(
+                          builder: (context) => const VentanaVolumen(),
+                        ),
+                      ),
+                    ),
+                    // Seccion para organizar los botones
+                    const SizedBox(height: 20),
+                    BotonCalcular(
+                      texto: 'Calcular Biomasa',
+                      icono: Icons.calculate,
+                      color: Color(0xFF254435),
+                      // Redirige a la pantalla de cálculo de biomasa
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const VentanaBiomasa(),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              // Seccion para organizar los botones
-              const SizedBox(height: 20),
-              BotonCalcular(
-                texto: 'Calcular Biomasa',
-                icono: Icons.calculate,
-                color: Color(0xFF254435),
-                // Redirige a la pantalla de cálculo de biomasa
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const VentanaBiomasa(),
-                  ),
+            ),
+            // Botón de ojo para visualizar desarrolladores
+            Padding(
+              padding: const EdgeInsets.only(bottom: 24.0),
+              child: IconButton(
+                icon: const Icon(
+                  Icons.remove_red_eye,
+                  size: 35,
+                  color: Colors.white,
                 ),
+                tooltip: 'Ver desarrolladores',
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('Desarrolladores'),
+                      content: const Text(
+                        'Amelia Mendoza López\nElton Yael',
+                      ), // Cambia por los nombres reales
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Cerrar'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
