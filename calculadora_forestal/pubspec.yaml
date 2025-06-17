@@ -71,6 +71,7 @@ flutter:
     - assets/images/fondo_Volumen.jpg
     - assets/images/unsijLogo.png
     - assets/images/fondo_Biomasa.jpg
+    - assets/images/pinos.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
