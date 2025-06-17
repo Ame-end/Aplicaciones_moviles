@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         // Fondo con imagen y filtro de color
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/pinos.jpg'),
+            image: AssetImage('assets/images/pinos2.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.black54,
@@ -35,10 +35,10 @@ class HomeScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 24.0, bottom: 32.0),
-              child: Image.asset(
+              /*child: Image.asset(
                 'assets/images/unsijLogo.png', // Cambia la ruta por la tuya
                 height: 120, // Ajusta el tamaño según lo necesites
-              ),
+              ),*/
             ),
             Expanded(
               child: Center(
