@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         // Fondo con imagen y filtro de color
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/fondo.jpg'),
+            image: AssetImage('assets/images/fondoUniversidad.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.black54,
