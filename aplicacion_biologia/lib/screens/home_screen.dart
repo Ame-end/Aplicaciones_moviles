@@ -206,7 +206,7 @@ class HomeScreen extends StatelessWidget {
                                     // Descripción del proyecto
                                     const TextSpan(
                                       text:
-                                          'Este proyecto busca estudiar la conservación de la tarántula mexicana de terciopelo negro.',
+                                          'Este proyecto busca estudiar la conservación de la tarántula Mexicana de terciopelo negro',
 
                                       //alinear
                                       style: TextStyle(
